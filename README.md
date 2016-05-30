@@ -1,2 +1,0 @@
-# project
-Minor Programmeren  Eindproject
