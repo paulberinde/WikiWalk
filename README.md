@@ -1,5 +1,5 @@
-# Minor Programmeren Eindproject - WikiWalk (Amsterdam Edition)
-
+# Minor Programmeren Project - WikiWalk (Amsterdam Edition)
+![alt text](https://github.com/paulberinde/project/blob/master/doc/embed.png)
 ## Problem Definition
 
 Today people are more and more connected, and have access to a variety of information sources when visiting places, both old and new. 
@@ -23,7 +23,8 @@ Note: Elements not marked as (MVP) are considered optional.
 + Allows for offline data storage (maps/PoI information) (to be investigated)
 
 ## App Concept Screens
-
+![alt text](https://github.com/paulberinde/project/blob/master/doc/Start%20Screen.jpg)
+![alt text](https://github.com/paulberinde/project/blob/master/doc/Free-Roam.jpg)
 
 ## Data Sources and Processing
 + Two main data sources will be a)map data (provided via Google Maps) and b) Wikipedia/ other wiki data (provided via MediaWiki/Wikia APIs)
