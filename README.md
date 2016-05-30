@@ -36,7 +36,7 @@ be created. The possibility and the technology for this is under investigation.
 + Any further data sources to be decided.
 
 
-## Application component layout
+## Application Components and Layout
 The application will need to have separate handlers for Google Maps, MediaWiki, as well as SQLite; lastly if possible, a way to manage offline
 data should also exist. 
 
