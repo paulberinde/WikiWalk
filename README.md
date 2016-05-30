@@ -66,8 +66,9 @@ Amsterdam Travel Guide is one of the apps that fills a similar need to WikiWalk.
 shopping areas, whereas WikiWalk aims to cover mostly landmarks. While Amsterdam Travel Guide Allows to filter out unwanted information,
 what is left is very sparse (see below):
 ![alt text](https://github.com/paulberinde/project/blob/master/doc/Screenshot_2016-05-30-16-11-32.png)
-PocketGuide by PocketGuide Inc. is another app offering GPS - enabled tour guides. Due to the nature of the app I am only able to infer
-based on user reviews on what the issues are, such as the free version being barely functional online in order to push for the purchase of
+
+
+PocketGuide by PocketGuide Inc. is another app offering GPS - enabled tour guides. Due to the nature of the app I am only able to infer based on user reviews on what the issues are, such as the free version being barely functional online in order to push for the purchase of
 offline content, in the form of audio guides. The app also forces a certain rigueur on the user, having to partake in an audio tour,
 rather then the ad-hoc, no-commitment approach proposed by WikiWalk.
 
