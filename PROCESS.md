@@ -12,3 +12,9 @@ Three logo versions have also been created:
 
 
 ![alt text](https://github.com/paulberinde/project/blob/master/doc/logotest3.png)
+
+# Day 2
+The main focus of day two is to test the GoogleMaps API inside a in a simple android implementation .If time permits, the Media Wiki API will also be tested. Lastly, work on the design document will be started.
+
+
+
