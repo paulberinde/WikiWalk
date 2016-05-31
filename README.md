@@ -1,5 +1,5 @@
 # Minor Programmeren Project - WikiWalk (Amsterdam Edition)
-![alt text](https://github.com/paulberinde/project/blob/master/doc/embed.png)
+![alt text](https://github.com/paulberinde/project/blob/master/doc/logotest3.png)
 ## Problem Definition
 
 Today people are more and more connected, and have access to a variety of information sources when visiting places, both old and new. 
