@@ -1,7 +1,7 @@
 # Minor Programmeren Project - WikiWalk (Amsterdam Edition)
 ![alt text](https://github.com/paulberinde/project/blob/master/doc/logotest3.png)
 ## Problem Definition
- 
+
 Today people are more and more connected, and have access to a variety of information sources when visiting places, both old and new. 
 This information is in many cases fragmented, or non-interactive. Furthermore, it mostly provides anything of value to tourists, whereas
 even locals might sometimes want to gain new insight into their city.
