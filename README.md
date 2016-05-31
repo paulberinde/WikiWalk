@@ -23,7 +23,7 @@ Note: Elements not marked as (MVP) are considered optional.
 + Allows for offline data storage (maps/PoI information) (to be investigated)
 
 ## App Concept Screens
-![alt text](https://github.com/paulberinde/project/blob/master/doc/Start%20Screen.jpg)
+![alt text](https://github.com/paulberinde/project/blob/master/doc/Start%20Screen%202.png)
 ![alt text](https://github.com/paulberinde/project/blob/master/doc/Free-Roam.jpg)
 
 ## Data Sources and Processing
