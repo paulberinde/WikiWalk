@@ -15,7 +15,7 @@ No plugins are currently required by the application, but it does make extensive
 
 The two main data sources for the application are the GoogleMaps API and WikiMedia API, one providing the map canvas for the application, while the other provides the information content. Whether further data sources are required is to be decided after the initial round of prototyping.
 
-#5. Database Tables, Fields
+##5. Database Tables, Fields
 A SQLite DB will be used for storing visited locations, in order to prevent repeat notifications. These elements will be loaded with a different marker on a map compared to not yet visited locations.
 
 The following information will be stored in a database table (field names, types and overall table layout are subject to change):
