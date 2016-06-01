@@ -14,10 +14,15 @@ Three logo versions have also been created:
 ![alt text](https://github.com/paulberinde/project/blob/master/doc/logotest3.png)
 
 # Day 2
-Day 2 will be spent doing the following:
+Day 2 was spent doing the following:
 + Setting up Google Maps API and building a simple implementation to test it
 + Research MediaWiki API
 + Start on the design document
+
+# Day 3
++ Further work on prototype (main menu)
++ Design document (classes)
+
 
 
 
