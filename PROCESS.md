@@ -19,6 +19,9 @@ Day 3 was spent doing the following:
 + Prototype work: Main screen design and Google Maps API research
 + Technical design document creation (Modules/ Classes and interactions, used API-s, data sources, database setup)
  
+## Day 4
+Day 3 was spent doing the following:
++ Prototype work: Main screen design refining, logo creation and GoogleMAps API behaviour coding
 
 
 
