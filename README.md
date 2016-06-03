@@ -18,13 +18,15 @@ Note: Elements not marked as (MVP) are considered optional.
 + Allows for a tour selection or a free-roam mode (MVP)
 + Tracks checked location history and will not re-notify for already checked PoIs (Points of Interest)(MVP)
 + Allows for filtering of PoIs based on preference
-+ Allows for NO GPS mode (lite mode), though with certain features missing (MVP)
-+ Game mode: Tracks visited PoIs and user receives points based on visits
++ Allows for NO GPS mode (lite mode), though with certain features missing
++ Game mode: Selects a random PoI within a reasonable distance from current position, and guides user to it via cryptic instructions.
++ Card Collection: A collectable list of virtual cards containing all PoI and basic information about it. Serves as progress checker and mini-encyclopedia
 + Allows for offline data storage (maps/PoI information) (to be investigated)
 
 ## App Concept Screens
-![alt text](https://github.com/paulberinde/project/blob/master/doc/Start%20Screen%202.png)
-![alt text](https://github.com/paulberinde/project/blob/master/doc/Free-Roam.jpg)
+![alt text](https://github.com/paulberinde/project/blob/master/doc/MainActivity.png)
+![alt text](https://github.com/paulberinde/project/blob/master/doc/MapActivity.png)
+![alt text](https://github.com/paulberinde/project/blob/master/doc/Collection.png)
 
 ## Data Sources and Processing
 + Two main data sources will be a)map data (provided via Google Maps) and b) Wikipedia/ other wiki data (provided via MediaWiki/Wikia APIs)
