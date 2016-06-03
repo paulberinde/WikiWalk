@@ -20,7 +20,7 @@ Note: Elements not marked as (MVP) are considered optional.
 + Allows for filtering of PoIs based on preference
 + Allows for NO GPS mode (lite mode), though with certain features missing
 + Game mode: Selects a random PoI within a reasonable distance from current position, and guides user to it via cryptic instructions.
-+ Card Collection: A collectable list of virtual cards containing all PoI and basic information about it. Serves as progress checker and mini-encyclopedia
++ Card Collection: A collectable list of virtual cards containing all PoI and basic information about them. Serves as progress checker and mini-encyclopedia (MVP)
 + Allows for offline data storage (maps/PoI information) (to be investigated)
 
 ## App Concept Screens
