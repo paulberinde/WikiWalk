@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="mprog.nl.wikiwalk.MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView2"
+        android:src="@drawable/collection" />
+
+    <ImageView
+        android:layout_width="170dp"
+        android:layout_height="204dp"
+        android:id="@+id/imageView3"
+        android:src="@drawable/begijnhof"
+        android:layout_marginTop="73dp"
+        android:layout_alignTop="@+id/imageView2"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView4"
+        android:src="@drawable/hotelkrasnapolsky"
+        android:layout_below="@+id/editText"
+        android:layout_toStartOf="@+id/editText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:text="The Begijnhof is one of the oldest inner courts in the city of Amsterdam. As the name suggests, it was originally a Béguinage. Today it is also the site of the English Reformed Church."
+        android:textSize="10sp"
+        android:layout_below="@+id/imageView2"
+        android:layout_toEndOf="@+id/imageView3"
+        android:layout_marginStart="31dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NH Collection Grand Hotel Krasnapolsky, often informally referred to as Hotel Krasnapolsky is a five-star hotel on Dam Square in central Amsterdam, Netherlands. The hotel has 451 rooms, a convention center, restaurants and a pier for boats on the Oudezijds Voorburgwal canal."
+        android:id="@+id/textView"
+        android:layout_marginTop="35dp"
+        android:textSize="10sp"
+        android:layout_below="@+id/imageView3"
+        android:layout_alignStart="@+id/editText" />
+
+</RelativeLayout>
