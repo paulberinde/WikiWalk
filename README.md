@@ -61,7 +61,7 @@ Alternate map APIs are being investigated as suitable alternatives.
 + Wikipedia might not be exhaustive enough for all locations, so alternate information might have to be found.
 
 + Unknown whether GoogleMaps allows for offline storage of map data outside the dedicated app.
-
+ 
 
 ## Similar Applications Already Available
 Amsterdam Travel Guide is one of the apps that fills a similar need to WikiWalk. However, it is a general app mixing landmarks with 
