@@ -24,6 +24,19 @@ Day 4 was spent doing the following:
 + Prototype work: Main screen design refining, logo creation and GoogleMAps API behaviour coding
 
 
+## Day 5 
+Day 5 was spent further refining the prototype and researching the following elements:
++ Removing data from the default GoogleMap 
++ OpenMaps API as alternative
+
+
+
+
+
+
+
+
+
 
 
 
