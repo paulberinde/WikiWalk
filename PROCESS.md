@@ -29,6 +29,26 @@ Day 5 was spent further refining the prototype and researching the following ele
 + Removing data from the default GoogleMap 
 + OpenMaps API as alternative
 
+## Day 6
++ OpenMaps API has been abandoned despite some advantages (cacheable map, etc) due to added complexity
++ Rijksmonumenten API investigation for list of Rijksmonumenten
+
+## Day 7 
++ Apache SOLR syntax queries test for Rijksmonumenten API
++ Download of DB in Access format for comparison of results.
+
+## Day 8 
++ Successful download of data via API
++ Local database approach favoured due to large size of data (17MB full data, 10 MB Trimmed Data (no woonhuizen)
++ CSV output of API query generated errors, method to convert JSON to CSV researched and applied
++ Used SQLITE Browser to create db based on CSV
+
+## Day 9 
++ Research adding existing DB to app
++ Built DB Handler and Operations Classes
++ Errors encounted when trying to populate list based on DB data (null pointer exception)
++ Alpha version currently in non-working state
+
 
 
 
