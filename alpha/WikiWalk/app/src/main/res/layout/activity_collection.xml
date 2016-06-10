@@ -15,10 +15,12 @@
         android:id="@+id/imageView2"
         android:src="@drawable/collection" />
 
-    <StackView
+    <ListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/collectionStack"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:id="@+id/listView2"
+        android:layout_below="@+id/imageView2"
+        android:layout_alignParentStart="true" />
+
+
 </RelativeLayout>
