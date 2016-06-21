@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background3"
+    android:weightSum="1">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fullscreenTitleView"
+        android:textColor="#000000"
+        android:layout_weight="0.16"
+        android:textAlignment="center"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:textSize="26sp"
+        android:layout_marginTop="25dp" />
+
+    <ImageView
+        android:layout_width="400dp"
+        android:layout_height="200dp"
+        android:id="@+id/fullscreenImageView"
+        android:gravity="center"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/fullscreenTitleView"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/addressView"
+        android:textColor="#060606"
+        android:layout_below="@+id/fullscreenImageView"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="30dp"
+        android:textSize="18dp"
+        android:layout_marginLeft="25dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/locationView"
+        android:textColor="#000000"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/addressView"
+        android:textSize="18dp"
+        android:layout_marginLeft="25dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/categoryView"
+        android:textColor="#000000"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/locationView"
+        android:textSize="18dp"
+        android:layout_marginLeft="25dp" />
+
+
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="Ga naar Wikipedia"
+        android:id="@+id/wikipediaButton"
+        android:layout_below="@+id/categoryView"
+        android:background="#08AE9E"
+        android:textColor="@android:color/white"
+        android:ellipsize="marquee"
+        android:textSize="20dp"
+        android:elegantTextHeight="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:clickable="true" />
+
+    <WebView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/wikipediaView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:visibility="invisible"
+        android:elevation="3dp" />
+
+</RelativeLayout>
