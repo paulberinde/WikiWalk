@@ -2,7 +2,6 @@ package nl.mprog.wikiwalk;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -21,13 +20,16 @@ import java.util.Objects;
 
 public class FullscreenImageActivity extends Activity {
     Context context;
+    WebView wikipediaView;
+    int isWebviewVisible;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_fullscreen_image);
         Bundle bundle = getIntent().getBundleExtra("android.intent.extra.INTENT");
         int position = bundle.getInt("position");
@@ -41,11 +43,8 @@ public class FullscreenImageActivity extends Activity {
         String gpsLocation = (String) collectionItem.get(4);
         String buildingCategory = (String) collectionItem.get(5);
         databaseOperations.close();
-
-
         TextView fullscreenTitleView = (TextView) findViewById(R.id.fullscreenTitleView);
         fullscreenTitleView.setText(name);
-
         ImageView fullscreenImageView = (ImageView) findViewById(R.id.fullscreenImageView);
         Picasso
                 .with(context)
@@ -58,14 +57,14 @@ public class FullscreenImageActivity extends Activity {
 
         TextView locationView = (TextView) findViewById(R.id.locationView);
         locationView.setText("Locatie op de kaart: " + gpsLocation);
-
         TextView categoryView = (TextView) findViewById(R.id.categoryView);
         categoryView.setText("Categorie: " + buildingCategory);
-        final WebView wikipediaView = (WebView) findViewById(R.id.wikipediaView);
+        wikipediaView = (WebView) findViewById(R.id.wikipediaView);
         wikipediaView.setWebViewClient(new WebViewClient());
         wikipediaView.getSettings().setJavaScriptEnabled(true);
         wikipediaView.setVisibility(View.GONE);
         Button wikipediaButton = (Button) findViewById(R.id.wikipediaButton);
+
         wikipediaButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -74,6 +73,7 @@ public class FullscreenImageActivity extends Activity {
                 }
                 else {
                     wikipediaView.setVisibility(View.VISIBLE);
+                    isWebviewVisible=1;
                     wikipediaView.getSettings().setJavaScriptEnabled(true);
                     wikipediaView.setWebViewClient(new WebViewClient());
                     wikipediaView.setWebViewClient(new WebViewClient());
@@ -84,8 +84,20 @@ public class FullscreenImageActivity extends Activity {
             }
 
         });
+
     }
+    @Override
+    public void onBackPressed() {
 
 
+        if (isWebviewVisible == 0) {
+            super.onBackPressed();
 
+        }
+        wikipediaView.setVisibility(View.GONE);
+        isWebviewVisible=0;
+        return;
+
+    }
 }
+

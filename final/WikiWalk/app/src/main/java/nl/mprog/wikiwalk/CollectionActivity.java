@@ -27,8 +27,8 @@ public class CollectionActivity extends Activity {
         setContentView(R.layout.activity_collection);
         DatabaseOperations databaseOperations = DatabaseOperations.getInstance(this);
         databaseOperations.open();
-        ArrayList<String>collection = (ArrayList<String>) databaseOperations.getCollection();
-
+        ArrayList<String> collection = (ArrayList<String>) databaseOperations.getCollection();
+        final ArrayList<String> rowID= (ArrayList<String>) databaseOperations.getRowID();
 
         GridView gridView = (GridView) findViewById(R.id.collectionView);
 
@@ -39,7 +39,7 @@ public class CollectionActivity extends Activity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent goToFullscreenIntent = new Intent(context, FullscreenImageActivity.class);
                 Bundle bundle =new Bundle();
-                bundle.putInt("position", position);
+                bundle.putInt("position", Integer.parseInt(rowID.get(position)));
                 goToFullscreenIntent.putExtra("android.intent.extra.INTENT", bundle);
                 context.startActivity(goToFullscreenIntent);
             }

@@ -59,9 +59,10 @@ public class DatabaseOperations {
         return poiList;
     }
 
+
     public List<String> getCollection() {
         List<String> collection = new ArrayList<>();
-        Cursor cursor = database.rawQuery("SELECT wiki_thumb_url FROM POIS" , null);
+        Cursor cursor = database.rawQuery("SELECT wiki_thumb_url FROM POIS where visited ='YES'" , null);
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
             collection.add(cursor.getString(0));
@@ -71,26 +72,35 @@ public class DatabaseOperations {
         return collection;
     }
 
-    /*
-    public List<ArrayList<String>> getCollection() {
-        ArrayList<ArrayList<String>> collection = new ArrayList<ArrayList<String>>();
-        Cursor cursor = database.rawQuery("SELECT wiki_thumb_url, abc_objectnaam, abc_adres, wiki_article_url FROM POIS ", null);
+    public List<String> getRowID() {
+        List<String> rowID = new ArrayList<>();
+        Cursor cursor = database.rawQuery("SELECT row_ID FROM POIS where visited ='YES'" , null);
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
-            //collection.add(cursor.getString(0));
-            //collection.add(cursor.getString(1));
+            rowID.add(cursor.getString(0));
+            cursor.moveToNext();
+        }
+        cursor.close();
+        return rowID;
+    }
+
+/*
+    public List<ArrayList<String>> getCollection() {
+        ArrayList<ArrayList<String>> collection = new ArrayList<ArrayList<String>>();
+        Cursor cursor = database.rawQuery("SELECT row_ID wiki_thumb_url FROM POIS where VISITED='YES'", null);
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
             ArrayList<String> a = new ArrayList<>();
             a.add(cursor.getString(0));
             a.add(cursor.getString(1));
-            a.add(cursor.getString(2));
-            a.add(cursor.getString(3));
             collection.add(a);
             cursor.moveToNext();
         }
         cursor.close();
         return collection;
     }
-    */
+  */
+
 
     public ArrayList<String> getCollectionItem(int rowID) {
     ArrayList<String> collectionItem = new ArrayList<>();

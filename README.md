@@ -23,10 +23,10 @@ Note: Elements not marked as (MVP) are considered optional.
 + Card Collection: A collectable list of virtual cards containing all PoI and basic information about them. Serves as progress checker and mini-encyclopedia (MVP)
 + Allows for offline data storage (maps/PoI information) (to be investigated)
 
-## App Concept Screens
-![alt text](https://github.com/paulberinde/project/blob/master/doc/MainActivity.png)
-![alt text](https://github.com/paulberinde/project/blob/master/doc/MapActivity.png)
-![alt text](https://github.com/paulberinde/project/blob/master/doc/Collection.png)
+## App Screens
+![alt text](https://github.com/paulberinde/project/blob/master/doc/main_activity_final.gif)
+![alt text](https://github.com/paulberinde/project/blob/master/doc/collection_activity_final.gif)
+![alt text](https://github.com/paulberinde/project/blob/master/doc/collection_item_final.gif)
 
 ## Data Sources and Processing
 + Two main data sources will be a)map data (provided via Google Maps) and b) Wikipedia/ other wiki data (provided via MediaWiki/Wikia APIs)
