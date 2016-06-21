@@ -45,7 +45,7 @@ public class CollectionActivity extends Activity {
             }
         });
         int collectionProgress = collection.size();
-        String progressMessage = "Unlocked Points of Interest : " + collectionProgress + "/613";
+        String progressMessage = " Unlocked Points of Interest : " + collectionProgress + "/613";
         TextView progressTextView = (TextView) findViewById(R.id.progressTextView);
         progressTextView.setText(progressMessage);
 

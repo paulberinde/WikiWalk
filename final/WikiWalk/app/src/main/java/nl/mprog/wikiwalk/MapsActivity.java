@@ -10,6 +10,7 @@ import android.view.Window;
 import android.view.WindowManager;
 
 
+import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -22,7 +23,7 @@ import java.util.ArrayList;
 import java.util.Objects;
 
 
-public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnMyLocationChangeListener {
+public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
     Context context;
 
     private GoogleMap mMap;
@@ -65,7 +66,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             i++;
             String thumbUrl = (String) pois.get(i);
 
-
             MarkerOptions markerOptions = new MarkerOptions();
             markerOptions.position((new LatLng(latitude, longitude)));
             markerOptions.title(title);
@@ -80,13 +80,4 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
 
-    @Override
-    public void onMyLocationChange(Location location) {
-        LatLngBounds bounds = this.mMap.getProjection().getVisibleRegion().latLngBounds;
-
-        if (!bounds.contains(new LatLng(location.getLatitude(), location.getLongitude()))) {
-
-            mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(location.getLatitude(), location.getLongitude()), 18.0f));
-        }
-    }
 }

@@ -53,12 +53,12 @@ public class FullscreenImageActivity extends Activity {
                 .into(fullscreenImageView);
 
         TextView addressView = (TextView) findViewById(R.id.addressView);
-        addressView.setText("Adres: " + address);
+        addressView.setText(" Adres: " + address);
 
         TextView locationView = (TextView) findViewById(R.id.locationView);
-        locationView.setText("Locatie op de kaart: " + gpsLocation);
+        locationView.setText(" Locatie op de kaart: " + gpsLocation);
         TextView categoryView = (TextView) findViewById(R.id.categoryView);
-        categoryView.setText("Categorie: " + buildingCategory);
+        categoryView.setText(" Categorie: " + buildingCategory);
         wikipediaView = (WebView) findViewById(R.id.wikipediaView);
         wikipediaView.setWebViewClient(new WebViewClient());
         wikipediaView.getSettings().setJavaScriptEnabled(true);

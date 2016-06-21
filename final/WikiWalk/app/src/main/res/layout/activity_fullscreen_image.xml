@@ -9,14 +9,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/fullscreenTitleView"
-        android:textColor="#000000"
+        android:textColor="#ffffff"
         android:layout_weight="0.16"
         android:textAlignment="center"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:textSize="26sp"
-        android:layout_marginTop="25dp" />
+        android:layout_marginTop="25dp"
+        android:background="#08AE9E"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:alpha="0.85" />
 
     <ImageView
         android:layout_width="400dp"
@@ -28,41 +32,52 @@
         android:layout_centerHorizontal="true" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
         android:id="@+id/addressView"
-        android:textColor="#060606"
+        android:textColor="#ffffff"
         android:layout_below="@+id/fullscreenImageView"
         android:layout_alignParentStart="true"
         android:layout_marginTop="30dp"
         android:textSize="18dp"
-        android:layout_marginLeft="25dp" />
+        android:layout_marginLeft="25dp"
+        android:autoText="true"
+        android:layout_marginRight="25dp"
+        android:backgroundTint="@color/accent_material_light"
+        android:background="#08AE9E"
+        android:alpha="0.85" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
         android:id="@+id/locationView"
-        android:textColor="#000000"
+        android:textColor="#ffffff"
         android:layout_alignParentStart="true"
         android:layout_marginTop="25dp"
         android:layout_below="@+id/addressView"
         android:textSize="18dp"
-        android:layout_marginLeft="25dp" />
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:background="#08AE9E"
+        android:alpha="0.85" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
         android:id="@+id/categoryView"
-        android:textColor="#000000"
+        android:textColor="#ffffff"
         android:layout_alignParentStart="true"
         android:layout_marginTop="25dp"
         android:layout_below="@+id/locationView"
         android:textSize="18dp"
-        android:layout_marginLeft="25dp" />
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:background="#08AE9E"
+        android:alpha="0.85" />
 
 
     <Button
-        android:layout_width="300dp"
+        android:layout_width="match_parent"
         android:layout_height="65dp"
         android:text="Ga naar Wikipedia"
         android:id="@+id/wikipediaButton"
@@ -75,7 +90,9 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp"
         android:clickable="true"
-        android:alpha="0.85" />
+        android:alpha="0.85"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp" />
 
     <WebView
         android:layout_width="wrap_content"
