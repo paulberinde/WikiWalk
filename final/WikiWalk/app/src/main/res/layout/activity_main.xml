@@ -12,19 +12,21 @@
     android:visibility="visible">
 
     <ImageView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/imageView"
         android:src="@drawable/logotest3"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:alpha="0.85"
-        android:elevation="3dp" />
+        android:elevation="3dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp" />
 
     <Button
-        android:layout_width="300dp"
+        android:layout_width="match_parent"
         android:layout_height="65dp"
-        android:text="Free-Roam"
+        android:text="Free-Roam Modus"
         android:id="@+id/btnRoam"
         android:onClick="goToMap"
         android:background="#08AE9E"
@@ -36,12 +38,14 @@
         android:layout_above="@+id/btnCollection"
         android:layout_centerHorizontal="true"
         android:alpha="0.85"
-        android:elevation="3dp" />
+        android:elevation="3dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp" />
 
     <Button
-        android:layout_width="300dp"
+        android:layout_width="match_parent"
         android:layout_height="65dp"
-        android:text="View Card Collection"
+        android:text="Ga naar collectie"
         android:id="@+id/btnCollection"
         android:onClick="goToCollection"
         android:background="#08AE9E"
@@ -50,16 +54,17 @@
         android:textSize="20dp"
         android:elegantTextHeight="true"
         android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/btnRoam"
         android:alpha="0.85"
-        android:elevation="3dp" />
+        android:elevation="3dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageView3"
+        android:id="@+id/amsLogoView"
         android:src="@drawable/xxx"
-        android:alpha="0.4"
+        android:alpha="0.7"
         android:elevation="0dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"

@@ -54,7 +54,7 @@
             android:name=".CollectionActivity"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".FullscreenImageActivity"
+            android:name=".CollectionItemActivity"
             android:screenOrientation="portrait"/>
 
     </application>

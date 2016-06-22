@@ -13,7 +13,6 @@ import android.widget.GridView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class CollectionActivity extends Activity {
     Context context = this;
@@ -37,7 +36,7 @@ public class CollectionActivity extends Activity {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent goToFullscreenIntent = new Intent(context, FullscreenImageActivity.class);
+                Intent goToFullscreenIntent = new Intent(context, CollectionItemActivity.class);
                 Bundle bundle =new Bundle();
                 bundle.putInt("position", Integer.parseInt(rowID.get(position)));
                 goToFullscreenIntent.putExtra("android.intent.extra.INTENT", bundle);
@@ -45,11 +44,9 @@ public class CollectionActivity extends Activity {
             }
         });
         int collectionProgress = collection.size();
-        String progressMessage = " Unlocked Points of Interest : " + collectionProgress + "/613";
+        String progressMessage = "Ontdekte Monumenten: " + collectionProgress + " van 424";
         TextView progressTextView = (TextView) findViewById(R.id.progressTextView);
         progressTextView.setText(progressMessage);
-
-
 
     }
 }
