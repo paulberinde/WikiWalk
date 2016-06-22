@@ -8,17 +8,20 @@ import android.database.sqlite.SQLiteOpenHelper;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * WikiWalk - DatabaseOperations.Java
+ * Student: Paul Berinde-Tampanariu
+ * This Class contains the methods used to read and write to the database.
+ **/
 public class DatabaseOperations {
     private SQLiteOpenHelper databaseHandler;
     private SQLiteDatabase database;
     private static DatabaseOperations instance;
 
-
+    // Constructor
     public DatabaseOperations(Context context) {
         this.databaseHandler = new DatabaseHandler(context);
     }
-
 
     public static DatabaseOperations getInstance(Context context) {
         if (instance == null) {
@@ -43,23 +46,28 @@ public class DatabaseOperations {
         }
     }
 
-    public List<String> getPOIS() {
-        List<String> poiList = new ArrayList<>();
-        Cursor cursor = database.rawQuery("SELECT abc_lat, abc_lon, abc_objectnaam, visited, wiki_thumb_url FROM POIS ", null);
+    /**
+     * This method gets an ArrayList containing various information about monuments used for
+     * marker setting.
+     */
+    public List<String> getMonuments(String isUnlocked) {
+        List<String> monumentList = new ArrayList<>();
+        Cursor cursor = database.rawQuery("SELECT abc_lat, abc_lon, abc_objectnaam, abc_categorie FROM POIS WHERE visited=" + "'" + isUnlocked + "'", null);
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
-            poiList.add(cursor.getString(0));
-            poiList.add(cursor.getString(1));
-            poiList.add(cursor.getString(2));
-            poiList.add(cursor.getString(3));
-            poiList.add(cursor.getString(4));
+            monumentList.add(cursor.getString(0));
+            monumentList.add(cursor.getString(1));
+            monumentList.add(cursor.getString(2));
+            monumentList.add(cursor.getString(3));
             cursor.moveToNext();
         }
         cursor.close();
-        return poiList;
+        return monumentList;
     }
 
-
+    /**
+     * This method gets an ArrayList containing thumbnail urls for the Collection View.
+     */
     public List<String> getCollection() {
         List<String> collection = new ArrayList<>();
         Cursor cursor = database.rawQuery("SELECT wiki_thumb_url FROM POIS where visited ='YES'" , null);
@@ -71,7 +79,9 @@ public class DatabaseOperations {
         cursor.close();
         return collection;
     }
-
+    /**
+     * This method gets an ArrayList containing rowIDs used in the intent to the CollectionItemView.
+     */
     public List<String> getRowID() {
         List<String> rowID = new ArrayList<>();
         Cursor cursor = database.rawQuery("SELECT row_ID FROM POIS where visited ='YES'" , null);
@@ -84,27 +94,12 @@ public class DatabaseOperations {
         return rowID;
     }
 
-/*
-    public List<ArrayList<String>> getCollection() {
-        ArrayList<ArrayList<String>> collection = new ArrayList<ArrayList<String>>();
-        Cursor cursor = database.rawQuery("SELECT row_ID wiki_thumb_url FROM POIS where VISITED='YES'", null);
-        cursor.moveToFirst();
-        while (!cursor.isAfterLast()) {
-            ArrayList<String> a = new ArrayList<>();
-            a.add(cursor.getString(0));
-            a.add(cursor.getString(1));
-            collection.add(a);
-            cursor.moveToNext();
-        }
-        cursor.close();
-        return collection;
-    }
-  */
-
-
-    public ArrayList<String> getCollectionItem(int rowID) {
+    /**
+     * This method gets an ArrayList containing various information for a single Monument.
+     */
+    public ArrayList<String> getCollectionItem(int rowId) {
     ArrayList<String> collectionItem = new ArrayList<>();
-    Cursor cursor = database.rawQuery("SELECT wiki_image_url, abc_objectnaam, abc_adres, wiki_article_url, abc_locatie, abc_categorie FROM POIS where row_ID" + "=" + "'" + rowID + "'" , null);
+    Cursor cursor = database.rawQuery("SELECT wiki_image_url, abc_objectnaam, abc_adres, wiki_article_url, abc_locatie, abc_categorie FROM POIS where row_ID" + "=" + "'" + rowId + "'" , null);
     cursor.moveToFirst();
     collectionItem.add(cursor.getString(0));
     collectionItem.add(cursor.getString(1));
@@ -116,4 +111,12 @@ public class DatabaseOperations {
     return collectionItem;
     }
 
+    /**
+     * This method changes the parameter in the field visited from NO to YES for the Monument that
+     * has matching latitude, longitude and name.
+     */
+    public void setMonumentVisited(String latitude, String longitude, String name){
+        String strSQL = ( "UPDATE POIS SET visited = 'YES' where abc_objectnaam =" + "'" + name + "'" + " AND abc_lat LIKE " + "'" + latitude + "'" + "AND abc_lon LIKE" + "'" + longitude + "'");
+        database.execSQL(strSQL);
+    }
 }

@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">WikiWalk</string>
     <string name="title_activity_maps">Map</string>
+    <string name="collection_discovered_monuments">"Ontdekte Monumenten: "</string>
+    <string name="collection_monument_total">" van 415"</string>
+    <string name="no_wiki_toast">Helaas, er is geen Wikipedia artikel voor dit monument</string>
+    <string name="collection_item_address">"Adres: "</string>
+    <string name="collection_item_gps">"GPS: "</string>
+    <string name="collection_item_category">"Categorie: "</string>
+    <string name="mapView_marker_category">"Categorie: "</string>
 </resources>

@@ -14,7 +14,13 @@ import android.widget.ListView;
 
 import com.squareup.picasso.Picasso;
 import java.util.List;
-
+/**
+ * WikiWalk - ImageAdapter.Java
+ * Student: Paul Berinde-Tampanariu
+ * This Class is an extension of the ArrayAdapter used to populate a GridView with Images.
+ * The plug-in Picasso is used to get images from URLS and their lifecycle management.
+ * Uses a separate layout for a single Image.
+ **/
 
 public class ImageAdapter extends ArrayAdapter {
 
