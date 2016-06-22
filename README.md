@@ -24,9 +24,9 @@ Note: Elements not marked as (MVP) are considered optional.
 + Allows for offline data storage (maps/PoI information) (to be investigated)
 
 ## App Screens
-![alt text](https://github.com/paulberinde/project/blob/master/doc/main_activity_final.gif)
-![alt text](https://github.com/paulberinde/project/blob/master/doc/collection_activity_final.gif)
-![alt text](https://github.com/paulberinde/project/blob/master/doc/collection_item_final.gif)
+![alt text](https://github.com/paulberinde/project/blob/master/doc/main_activity_final.png)
+![alt text](https://github.com/paulberinde/project/blob/master/doc/collection_activity_final.png)
+![alt text](https://github.com/paulberinde/project/blob/master/doc/collection_item_final.png)
 
 ## Data Sources and Processing
 + Two main data sources will be a)map data (provided via Google Maps) and b) Wikipedia/ other wiki data (provided via MediaWiki/Wikia APIs)
