@@ -59,13 +59,14 @@ public class DatabaseOperations
 
 Apart from the generic methods used to get an instance, open and close a database, the following methods, which are all SQLite Queries, are implemented:
 	
-++getMonuments(String isUnlocked): Returns abc_lat, abc_lon, abc_objectnaam, abc_categorie for either locked or unlocked monuments. Used for marker related activities.
+- getMonuments(String isUnlocked): Returns abc_lat, abc_lon, abc_objectnaam, abc_categorie for either locked or unlocked monuments. Used for marker related activities.
 
-++getCollection: Returns a list of thumbnail urls for the Collection Gridview
-++getRowID: Returns the row ID for the thumbnails.
-++getCollectionItem(int rowId) Returns the fullscreen image url, name, address, location and category for the monument in rowID
+- getCollection: Returns a list of thumbnail urls for the Collection Gridview
 
-++setMonumentVisited(String latitude, String longitude, String name): sets the monument that has a matching abc_lat, abc_lon and abc_objectnaam to visited=YES. 
+- getRowID: Returns the row ID for the thumbnails.
+- getCollectionItem(int rowId) Returns the fullscreen image url, name, address, location and category for the monument in rowID
+
+- setMonumentVisited(String latitude, String longitude, String name): sets the monument that has a matching abc_lat, abc_lon and abc_objectnaam to visited=YES. 
 
 ### 3.5 ImageAdapter
 public class ImageAdapter extends ArrayAdapter
@@ -123,9 +124,11 @@ Lastly several issues were encountered while working with location detection. th
 
 Due to the series of issues mentioned above, the following features have been removed from the final product: 
 
-++No Lite Mode, since the entire experience depends on usage of user location.
-++No Tour Mode
-++ No Game Mode
+- No Lite Mode, since the entire experience depends on usage of user location.
+
+- No Tour Mode
+
+- No Game Mode
 
 
 Nonetheless, the final product offers a unique way to walk around the city and discover interesting, lesser known monuments, which was the initial goal of the product.
