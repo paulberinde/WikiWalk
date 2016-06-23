@@ -1,4 +1,5 @@
 #Final Report - WikiWalk 
+![alt text](https://github.com/paulberinde/project/blob/master/doc/main_activity_final.png)
 
 ## 1. Introduction
 WikiWalk is an application built around the GoogleMaps API and Google Location Services, while also using a DB containing query data from the Rijksmonumenten API. Data is also loaded from Wikipedia in a WebView, and WikiMedia Commons images used in the Monument Collection. the Picasso plugin (http://square.github.io/picasso/) is used for easy remote image management(download, recycle of views, etc.)
