@@ -20,3 +20,6 @@ By using the app during a visit to Amsterdam, or a simple walk across town, you 
 
 Due to the nature of the data sources in use, the app is currently only available in Dutch.
  
+LICENSE:
+
+This Project is Licensed under the Unlicense.
