@@ -8,12 +8,12 @@ WikiWalk is an application built around the GoogleMaps API and Google Location S
 ## 2. Technical design
 The application consists of two main parts: the Free-Roam mode and the Collection View. Separation of concerns has been followed to the best of the student's ability when designing the application.
 
-###2.1 Free-Roam Mode
+### 2.1 Free-Roam Mode
 Free-roam Mode consists of one activity (Maps Activity) and several related classes: LocationHandler and MarkerHandler are used for managing location data and Marker activities(cleaning the map, setting markers, updating a marker as visited in the database). DatabaseHandler is in charge of creating the Database; and DatabaseOperations contain  methods which implement the various CRUD operations needed to fetch or update data.
 
 On a change in location, the handleNewLocation method in MapsActivity updates the map so that it's centered on the user's position and then requests a list of coordinates for not yet discovered markers; it computes the distance between the user's position and the position of each value in this list, and if the distance is 20 meters or less, then the relevant monument is marked as unlocked, a toast message is provided and the marker is colored blue (for visited) on the next update). An unlocked monument can be checked in the collection.
 
-###2.2 Collection
+### 2.2 Collection
 The Collection consists of two activities - CollectionActivity and CollectionItemActivity.
 Collection activity makes use of an imageAdapter in order to implement the Gridview in which the unlocked monuments are visible and can be selected for individual view. Thumbnails of images are loaded in the Gridview to reduce data usage.
 
@@ -22,8 +22,8 @@ On click the relevant element is loaded in the CollectionItemActivity; this elem
 This Activity also contains a button which, when pressed, will open a WebView and load the relevant Wikipedia article if it exists. If there is none, a toast will inform the user of the situation. On pressing the back button while the webView is opened, it is made invisible, so that in case the button was pressed accidentally, the data is kept in memory. On return to the CollectionActivity, the WebView data is purged through the normal Android Activity Lifecycle.
 
 
-##3. Activities and Classes (Alphabetical in-Depth View)
-###3.1 CollectionActivity
+## 3. Activities and Classes (Alphabetical in-Depth View)
+### 3.1 CollectionActivity
 
 Public class CollectionActivity extends Activity
 
@@ -34,7 +34,7 @@ The GridView is also initialized and the imageAdapter is set, as well as the onI
 Finally text is set for the views in the layout.
 
 
-###3.2 CollectionItemActivity
+### 3.2 CollectionItemActivity
 
 public class CollectionItemActivity extends Activity 
 
@@ -46,7 +46,7 @@ In case the URL is correct, the page is loaded, in case there is no url, the use
 The OnBackPressed method is overridden with the following condition: if the WebView is visible when the back button is pressed, then the WebWiew is made invisible. This was implemented so that the Wikipedia page isn't reloaded endlessly for the same item, and to reduce the number of activities.
 If the webView is invisible, then the back button works as designed.
 
-###3.3 DatabaseHandler
+### 3.3 DatabaseHandler
 
 public class DatabaseHandler extends SQLiteAssetHelper
 
@@ -99,7 +99,7 @@ Apart from the MapsActivity relevant Overrides, the class contains setupMap and 
 
 checkForUnlocks is a method which compares the distance between the current location and all locked (red) markers on the map, and in case it is 20 meters or less, it unlocks the relevant entry in the Collection via an SQLite Query.
 
-###3.9 MarkerHandler
+### 3.9 MarkerHandler
 
 public class MarkerHandler
 
@@ -113,7 +113,7 @@ cleanMap takes the GoogleMap instance as argument, and runs the GoogleMap.clear 
 
 changeMarkerToUnlocked accesses the DB via DBoperations and changes the value of visited to YES for the monument with the matching name and latitude and longitude.
 
-##4. Challenges
+## 4. Challenges
 
 The development process of WikiWalk was one that met hurdles rather often. Firstly, the GoogleMaps API does not allow for an empty map, and even with no other APIs connected, the level of detail is on occasion too much. Alternatives were prospected but eventually rejected due to lack of time and experience.
 
@@ -135,7 +135,7 @@ Due to the series of issues mentioned above, the following features have been re
 Nonetheless, the final product offers a unique way to walk around the city and discover interesting, lesser known monuments, which was the initial goal of the product.
 
 
-##5. Design decisions
+## 5. Design decisions
 Initially, the choice was to store different data in the database. Thanks to Rijksmonumenten API, most of the data is available offline in a DB, while images and Wikipedia pages can be loaded on request. This solution is snappy, has a smaller footprint on the phone, and is also rather economical when it comes to data usage.
 Other than this, the only significant change was switching the language to Dutch; it did not make sense to have an English app which presents all the data in Dutch.
 
